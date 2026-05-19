@@ -129,6 +129,30 @@ DeterministicCombatEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/build
 .PHONY : DeterministicCombatEngine/fast
 
+src/debug/debug_overlay.o: src/debug/debug_overlay.cpp.o
+.PHONY : src/debug/debug_overlay.o
+
+# target to build an object file
+src/debug/debug_overlay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o
+.PHONY : src/debug/debug_overlay.cpp.o
+
+src/debug/debug_overlay.i: src/debug/debug_overlay.cpp.i
+.PHONY : src/debug/debug_overlay.i
+
+# target to preprocess a source file
+src/debug/debug_overlay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.i
+.PHONY : src/debug/debug_overlay.cpp.i
+
+src/debug/debug_overlay.s: src/debug/debug_overlay.cpp.s
+.PHONY : src/debug/debug_overlay.s
+
+# target to generate assembly for a file
+src/debug/debug_overlay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.s
+.PHONY : src/debug/debug_overlay.cpp.s
+
 src/game/combat.o: src/game/combat.cpp.o
 .PHONY : src/game/combat.o
 
@@ -152,6 +176,30 @@ src/game/combat.s: src/game/combat.cpp.s
 src/game/combat.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.s
 .PHONY : src/game/combat.cpp.s
+
+src/game/replay.o: src/game/replay.cpp.o
+.PHONY : src/game/replay.o
+
+# target to build an object file
+src/game/replay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o
+.PHONY : src/game/replay.cpp.o
+
+src/game/replay.i: src/game/replay.cpp.i
+.PHONY : src/game/replay.i
+
+# target to preprocess a source file
+src/game/replay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.i
+.PHONY : src/game/replay.cpp.i
+
+src/game/replay.s: src/game/replay.cpp.s
+.PHONY : src/game/replay.s
+
+# target to generate assembly for a file
+src/game/replay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.s
+.PHONY : src/game/replay.cpp.s
 
 src/game/simulation.o: src/game/simulation.cpp.o
 .PHONY : src/game/simulation.o
@@ -201,6 +249,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/render/renderer.o: src/render/renderer.cpp.o
+.PHONY : src/render/renderer.o
+
+# target to build an object file
+src/render/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o
+.PHONY : src/render/renderer.cpp.o
+
+src/render/renderer.i: src/render/renderer.cpp.i
+.PHONY : src/render/renderer.i
+
+# target to preprocess a source file
+src/render/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.i
+.PHONY : src/render/renderer.cpp.i
+
+src/render/renderer.s: src/render/renderer.cpp.s
+.PHONY : src/render/renderer.s
+
+# target to generate assembly for a file
+src/render/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.s
+.PHONY : src/render/renderer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,15 +282,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... DeterministicCombatEngine"
+	@echo "... src/debug/debug_overlay.o"
+	@echo "... src/debug/debug_overlay.i"
+	@echo "... src/debug/debug_overlay.s"
 	@echo "... src/game/combat.o"
 	@echo "... src/game/combat.i"
 	@echo "... src/game/combat.s"
+	@echo "... src/game/replay.o"
+	@echo "... src/game/replay.i"
+	@echo "... src/game/replay.s"
 	@echo "... src/game/simulation.o"
 	@echo "... src/game/simulation.i"
 	@echo "... src/game/simulation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/render/renderer.o"
+	@echo "... src/render/renderer.i"
+	@echo "... src/render/renderer.s"
 .PHONY : help
 
 

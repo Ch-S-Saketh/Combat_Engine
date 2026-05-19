@@ -8,9 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/saketh/dev/engine/src/debug/debug_overlay.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o.d"
   "/home/saketh/dev/engine/src/game/combat.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o.d"
+  "/home/saketh/dev/engine/src/game/replay.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o.d"
   "/home/saketh/dev/engine/src/game/simulation.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o.d"
   "/home/saketh/dev/engine/src/main.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o.d"
+  "/home/saketh/dev/engine/src/render/renderer.cpp" "CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o.d"
   "" "DeterministicCombatEngine" "gcc" "CMakeFiles/DeterministicCombatEngine.dir/link.d"
   )
 

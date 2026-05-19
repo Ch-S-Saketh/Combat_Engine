@@ -72,10 +72,24 @@ include CMakeFiles/DeterministicCombatEngine.dir/flags.make
 CMakeFiles/DeterministicCombatEngine.dir/codegen:
 .PHONY : CMakeFiles/DeterministicCombatEngine.dir/codegen
 
+CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
+CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o: /home/saketh/dev/engine/src/debug/debug_overlay.cpp
+CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o -c /home/saketh/dev/engine/src/debug/debug_overlay.cpp
+
+CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saketh/dev/engine/src/debug/debug_overlay.cpp > CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.i
+
+CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saketh/dev/engine/src/debug/debug_overlay.cpp -o CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.s
+
 CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
 CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o: /home/saketh/dev/engine/src/game/combat.cpp
 CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o -c /home/saketh/dev/engine/src/game/combat.cpp
 
 CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.i: cmake_force
@@ -86,10 +100,24 @@ CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saketh/dev/engine/src/game/combat.cpp -o CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.s
 
+CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
+CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o: /home/saketh/dev/engine/src/game/replay.cpp
+CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o -c /home/saketh/dev/engine/src/game/replay.cpp
+
+CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saketh/dev/engine/src/game/replay.cpp > CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.i
+
+CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saketh/dev/engine/src/game/replay.cpp -o CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.s
+
 CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
 CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o: /home/saketh/dev/engine/src/game/simulation.cpp
 CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o -c /home/saketh/dev/engine/src/game/simulation.cpp
 
 CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.i: cmake_force
@@ -103,7 +131,7 @@ CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.s: cmake_force
 CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
 CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: /home/saketh/dev/engine/src/main.cpp
 CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o -c /home/saketh/dev/engine/src/main.cpp
 
 CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.i: cmake_force
@@ -114,22 +142,42 @@ CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saketh/dev/engine/src/main.cpp -o CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.s
 
+CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/flags.make
+CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o: /home/saketh/dev/engine/src/render/renderer.cpp
+CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o -MF CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o.d -o CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o -c /home/saketh/dev/engine/src/render/renderer.cpp
+
+CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saketh/dev/engine/src/render/renderer.cpp > CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.i
+
+CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saketh/dev/engine/src/render/renderer.cpp -o CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.s
+
 # Object files for target DeterministicCombatEngine
 DeterministicCombatEngine_OBJECTS = \
+"CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o" \
 "CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o" \
+"CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o" \
 "CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o" \
-"CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o"
+"CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o" \
+"CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o"
 
 # External object files for target DeterministicCombatEngine
 DeterministicCombatEngine_EXTERNAL_OBJECTS =
 
+DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/debug/debug_overlay.cpp.o
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/game/combat.cpp.o
+DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/game/replay.cpp.o
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/game/simulation.cpp.o
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o
+DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/src/render/renderer.cpp.o
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/build.make
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/compiler_depend.ts
 DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable DeterministicCombatEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable DeterministicCombatEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DeterministicCombatEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
