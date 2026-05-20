@@ -10,7 +10,6 @@ struct Entity{
     bool attacking;
     int attackTimer;
     int attackCooldown;
+    float iframeTimer;
 
-    Rectangle hurtbox;
-    Rectangle hitbox;
 };

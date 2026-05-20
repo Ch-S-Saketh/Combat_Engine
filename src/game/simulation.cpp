@@ -1,5 +1,6 @@
 #include "simulation.h"
 #include "combat.h"
+#include <cstddef>
 
 void initialize_simulation(SimulationState &sim){
     sim.frame = 0;
@@ -9,6 +10,25 @@ void initialize_simulation(SimulationState &sim){
 
     sim.players[0].health = 100;
     sim.players[1].health = 100;
+
+    sim.players[0].iframeTimer = 0.0f;
+    sim.players[1].iframeTimer = 0.0f;
+
+    sim.players[0].attackCooldown = 0;
+    sim.players[1].attackCooldown = 0;
+
+    sim.players[0].attacking = false;
+    sim.players[1].attacking = false;
+
+    sim.players[0].attackTimer = 0;
+    sim.players[1].attackTimer = 0;
+
+    sim.players[0].id = 0;
+    sim.players[1].id = 1;
+
+    sim.players[0].velocity = {0,0};
+    sim.players[1].velocity = {0,0};
+
 }
 
 void simulate_frame(SimulationState &sim, const PlayerInput &p1, const PlayerInput &p2){
@@ -33,26 +53,17 @@ void simulate_frame(SimulationState &sim, const PlayerInput &p1, const PlayerInp
 
     process_attacks(sim, p1, p2);
 
-    auto update_hitboxes = [](Entity &entity) {
-        entity.hurtbox.x = entity.position.x - 25;
-        entity.hurtbox.y = entity.position.y - 50;
-        entity.hurtbox.width = 50;
-        entity.hurtbox.height = 100;
-        
-        if(entity.attacking) {
-            entity.hitbox.x = entity.position.x;
-            entity.hitbox.y = entity.position.y - 25;
-            entity.hitbox.width = 60;
-            entity.hitbox.height = 50;
-        } else {
-            entity.hitbox = {0,0,0,0};
-        }
-    };
-
-    update_hitboxes(sim.players[0]);
-    update_hitboxes(sim.players[1]);
-    
     resolve_hits(sim);
 
     sim.frame++;
+}
+
+unsigned int hash_state(const SimulationState &sim) {
+    unsigned int hash = 2166136261u;
+    const unsigned char *data = reinterpret_cast<const unsigned char*>(&sim);
+    for (size_t i = 0; i < sizeof(SimulationState); ++i) {
+        hash ^= data[i];
+        hash *= 16777619u;
+    }
+    return hash;
 }

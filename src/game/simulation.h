@@ -16,3 +16,5 @@ void simulate_frame(
         const PlayerInput &p1,
         const PlayerInput &p2
         );
+
+unsigned int hash_state(const SimulationState &sim);
