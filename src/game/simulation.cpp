@@ -4,30 +4,31 @@
 
 void initialize_simulation(SimulationState &sim){
     sim.frame = 0;
+    sim.num_entities = 2;
 
-    sim.players[0].position = {200,300};
-    sim.players[1].position = {800,300};
+    sim.entities[0].position = {200,300};
+    sim.entities[1].position = {800,300};
 
-    sim.players[0].health = 100;
-    sim.players[1].health = 100;
+    sim.entities[0].health = 100;
+    sim.entities[1].health = 100;
 
-    sim.players[0].iframeTimer = 0.0f;
-    sim.players[1].iframeTimer = 0.0f;
+    sim.entities[0].iframeTimer = 0.0f;
+    sim.entities[1].iframeTimer = 0.0f;
 
-    sim.players[0].attackCooldown = 0;
-    sim.players[1].attackCooldown = 0;
+    sim.entities[0].attackCooldown = 0;
+    sim.entities[1].attackCooldown = 0;
 
-    sim.players[0].attacking = false;
-    sim.players[1].attacking = false;
+    sim.entities[0].attacking = false;
+    sim.entities[1].attacking = false;
 
-    sim.players[0].attackTimer = 0;
-    sim.players[1].attackTimer = 0;
+    sim.entities[0].attackTimer = 0;
+    sim.entities[1].attackTimer = 0;
 
-    sim.players[0].id = 0;
-    sim.players[1].id = 1;
+    sim.entities[0].id = 0;
+    sim.entities[1].id = 1;
 
-    sim.players[0].velocity = {0,0};
-    sim.players[1].velocity = {0,0};
+    sim.entities[0].velocity = {0,0};
+    sim.entities[1].velocity = {0,0};
 
 }
 
@@ -38,8 +39,8 @@ void simulate_frame(SimulationState &sim, const PlayerInput &p1, const PlayerInp
         if(input.right) entity.velocity.x += 5.0f;
     };
 
-    process_input(sim.players[0], p1);
-    process_input(sim.players[1], p2);
+    if (sim.num_entities > 0) process_input(sim.entities[0], p1);
+    if (sim.num_entities > 1) process_input(sim.entities[1], p2);
 
     auto update_movement = [](Entity &entity) {
         if(!entity.attacking) {
@@ -48,8 +49,9 @@ void simulate_frame(SimulationState &sim, const PlayerInput &p1, const PlayerInp
         }
     };
 
-    update_movement(sim.players[0]);
-    update_movement(sim.players[1]);
+    for (int i = 0; i < sim.num_entities; i++) {
+        update_movement(sim.entities[i]);
+    }
 
     process_attacks(sim, p1, p2);
 

@@ -3,8 +3,11 @@
 #include "entity.h"
 #include "input.h"
 
+constexpr int MAX_ENTITIES = 32;
+
 struct SimulationState{
-    Entity players[2];
+    Entity entities[MAX_ENTITIES];
+    int num_entities;
 
     int frame;
 };

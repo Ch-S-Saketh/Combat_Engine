@@ -17,8 +17,8 @@ void process_attacks(SimulationState &sim, const PlayerInput &p1, const PlayerIn
         }
     };
 
-    process_player_attack(sim.players[0], p1);
-    process_player_attack(sim.players[1], p2);
+    if (sim.num_entities > 0) process_player_attack(sim.entities[0], p1);
+    if (sim.num_entities > 1) process_player_attack(sim.entities[1], p2);
 }
 
 Rectangle get_hurtbox(const Entity &entity) {
@@ -33,23 +33,24 @@ Rectangle get_hitbox(const Entity &entity) {
 }
 
 void resolve_hits(SimulationState &sim){
-    Rectangle p0_hitbox = get_hitbox(sim.players[0]);
-    Rectangle p0_hurtbox = get_hurtbox(sim.players[0]);
-    Rectangle p1_hitbox = get_hitbox(sim.players[1]);
-    Rectangle p1_hurtbox = get_hurtbox(sim.players[1]);
+    for (int i = 0; i < sim.num_entities; i++) {
+        Rectangle hitbox = get_hitbox(sim.entities[i]);
+        if (hitbox.width == 0 && hitbox.height == 0) continue;
 
-    if(CheckCollisionRecs(p0_hitbox, p1_hurtbox) && sim.players[1].iframeTimer == 0){
-        sim.players[1].health -=10;
-        sim.players[1].iframeTimer = 20;
+        for (int j = 0; j < sim.num_entities; j++) {
+            if (i == j) continue;
+            Rectangle hurtbox = get_hurtbox(sim.entities[j]);
+
+            if(CheckCollisionRecs(hitbox, hurtbox) && sim.entities[j].iframeTimer == 0){
+                sim.entities[j].health -=10;
+                sim.entities[j].iframeTimer = 20;
+            }
+        }
     }
-    if(CheckCollisionRecs(p1_hitbox, p0_hurtbox) && sim.players[0].iframeTimer == 0){
-        sim.players[0].health -=10;
-        sim.players[0].iframeTimer = 20;
-    }
-    if(sim.players[0].iframeTimer>0){
-        sim.players[0].iframeTimer--;
-    }
-    if(sim.players[1].iframeTimer>0){
-        sim.players[1].iframeTimer--;
+
+    for (int i = 0; i < sim.num_entities; i++) {
+        if(sim.entities[i].iframeTimer>0){
+            sim.entities[i].iframeTimer--;
+        }
     }
 }

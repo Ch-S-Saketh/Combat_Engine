@@ -1,6 +1,8 @@
 #include "renderer.h"
 
 void render_simulation(const SimulationState &sim){
-    DrawRectangle(sim.players[0].position.x,sim.players[0].position.y,10,10,RED);
-    DrawRectangle(sim.players[1].position.x,sim.players[1].position.y,10,10,BLUE);
+    for (int i = 0; i < sim.num_entities; i++) {
+        Color color = (i == 0) ? RED : ((i == 1) ? BLUE : GREEN);
+        DrawRectangle(sim.entities[i].position.x, sim.entities[i].position.y, 10, 10, color);
+    }
 }
