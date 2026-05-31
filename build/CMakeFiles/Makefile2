@@ -85,12 +85,12 @@ clean: CMakeFiles/DeterministicCombatEngine.dir/clean
 CMakeFiles/DeterministicCombatEngine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target DeterministicCombatEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target DeterministicCombatEngine"
 .PHONY : CMakeFiles/DeterministicCombatEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DeterministicCombatEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saketh/dev/engine/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saketh/dev/engine/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DeterministicCombatEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saketh/dev/engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/DeterministicCombatEngine.dir/rule
@@ -102,7 +102,7 @@ DeterministicCombatEngine: CMakeFiles/DeterministicCombatEngine.dir/rule
 # codegen rule for target.
 CMakeFiles/DeterministicCombatEngine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target DeterministicCombatEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/saketh/dev/engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target DeterministicCombatEngine"
 .PHONY : CMakeFiles/DeterministicCombatEngine.dir/codegen
 
 # clean rule for target.

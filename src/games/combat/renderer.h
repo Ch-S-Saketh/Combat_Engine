@@ -1,5 +1,5 @@
 #pragma once
 
-#include "../game/simulation.h"
+#include "simulation.h"
 
 void render_simulation(const SimulationState &sim);

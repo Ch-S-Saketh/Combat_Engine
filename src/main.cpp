@@ -1,10 +1,9 @@
 #include <raylib.h>
 
 #include "core/timestep.h"
-#include "game/simulation.h"
-#include "game/replay.h"
-#include "render/renderer.h"
-#include "debug/debug_overlay.h"
+#include "core/environment.h"
+#include "games/combat/combat_env.h"
+#include "core/replay.h"
 
 enum class AppState {
     MainMenu,
@@ -16,14 +15,14 @@ int main(){
     InitWindow(1280,720,"Deterministic Combat Engine");
     SetTargetFPS(144);
 
-    SimulationState sim;
+    Environment* env = new CombatEnvironment();
     ReplaySystem replay;
     replay.playbackMode = false;
     replay.playbackFrame = 0;
     bool isRecording = false;
     bool isPaused = false;
 
-    initialize_simulation(sim);
+    env->reset();
 
     AppState currentState = AppState::MainMenu;
 
@@ -33,7 +32,7 @@ int main(){
         if (currentState == AppState::MainMenu) {
             if (IsKeyPressed(KEY_ENTER)) {
                 currentState = AppState::Gameplay;
-                initialize_simulation(sim);
+                env->reset();
             }
             
             BeginDrawing();
@@ -54,14 +53,14 @@ int main(){
                 isRecording = !isRecording;
                 if (isRecording) {
                     replay.frames.clear();
-                    initialize_simulation(sim);
+                    env->reset();
                 }
             }
             if (IsKeyPressed(KEY_P)) {
                 replay.playbackMode = !replay.playbackMode;
                 if (replay.playbackMode) {
                     replay.playbackFrame = 0;
-                    initialize_simulation(sim);
+                    env->reset();
                 }
             }
 
@@ -69,31 +68,31 @@ int main(){
                 bool shouldStep = !isPaused || IsKeyPressed(KEY_F);
 
                 if (shouldStep) {
-                    PlayerInput p1{};
-                    PlayerInput p2{};
+                    int action_p1 = 0;
+                    int action_p2 = 0;
 
                     if (replay.playbackMode) {
                         ReplayFrame frame = get_replay_frame(replay, replay.playbackFrame++);
-                        p1 = frame.p1;
-                        p2 = frame.p2;
+                        action_p1 = frame.action_p1;
+                        action_p2 = frame.action_p2;
                         if (replay.playbackFrame >= replay.frames.size()) {
                             replay.playbackMode = false;
                         }
                     } else {
-                        p1.left = IsKeyDown(KEY_A);
-                        p1.right = IsKeyDown(KEY_D);
-                        p1.attack = IsKeyDown(KEY_SPACE);
+                        if (IsKeyDown(KEY_A)) action_p1 |= 1;
+                        if (IsKeyDown(KEY_D)) action_p1 |= 2;
+                        if (IsKeyDown(KEY_SPACE)) action_p1 |= 4;
 
-                        p2.left = IsKeyDown(KEY_LEFT);
-                        p2.right = IsKeyDown(KEY_RIGHT);
-                        p2.attack = IsKeyDown(KEY_ENTER);
+                        if (IsKeyDown(KEY_LEFT)) action_p2 |= 1;
+                        if (IsKeyDown(KEY_RIGHT)) action_p2 |= 2;
+                        if (IsKeyDown(KEY_ENTER)) action_p2 |= 4;
 
                         if (isRecording) {
-                            record_frame(replay, p1, p2);
+                            record_frame(replay, action_p1, action_p2);
                         }
                     }
 
-                    simulate_frame(sim,p1,p2);
+                    env->step(action_p1, action_p2);
                 }
 
                 accumulator -= FIXED_DT;
@@ -101,8 +100,8 @@ int main(){
             }
             BeginDrawing();
             ClearBackground(BLACK);
-            render_simulation(sim);
-            debug_overlay(sim, isPaused, isRecording, replay.playbackMode);
+            env->render();
+            env->render_debug(isPaused, isRecording, replay.playbackMode);
             EndDrawing();
         }
         else if (currentState == AppState::PauseScreen) {
@@ -114,7 +113,7 @@ int main(){
             
             BeginDrawing();
             ClearBackground(BLACK);
-            render_simulation(sim);
+            env->render();
             DrawRectangle(0, 0, 1280, 720, {0, 0, 0, 150});
             DrawText("PAUSED", 550, 300, 40, WHITE);
             DrawText("Press ESC to resume", 520, 350, 20, LIGHTGRAY);
@@ -122,5 +121,6 @@ int main(){
         }
     }
     CloseWindow();
+    delete env;
     return 0;
 }

@@ -1,10 +1,7 @@
-CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: \
- /home/saketh/dev/engine/src/main.cpp /usr/include/stdc-predef.h \
- /home/saketh/dev/engine/include/raylib.h \
- /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
- /home/saketh/dev/engine/src/core/timestep.h \
- /home/saketh/dev/engine/src/core/environment.h \
- /usr/include/c++/15/vector /usr/include/c++/15/bits/requires_hosted.h \
+CMakeFiles/DeterministicCombatEngine.dir/src/core/replay.cpp.o: \
+ /home/saketh/dev/engine/src/core/replay.cpp /usr/include/stdc-predef.h \
+ /home/saketh/dev/engine/src/core/replay.h /usr/include/c++/15/vector \
+ /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -61,9 +58,4 @@ CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
  /usr/include/c++/15/bits/uses_allocator.h \
  /usr/include/c++/15/bits/uses_allocator_args.h /usr/include/c++/15/tuple \
- /usr/include/c++/15/bits/ranges_util.h \
- /home/saketh/dev/engine/src/games/combat/combat_env.h \
- /home/saketh/dev/engine/src/games/combat/simulation.h \
- /home/saketh/dev/engine/src/games/combat/entity.h \
- /home/saketh/dev/engine/src/games/combat/input.h \
- /home/saketh/dev/engine/src/core/replay.h
+ /usr/include/c++/15/bits/ranges_util.h

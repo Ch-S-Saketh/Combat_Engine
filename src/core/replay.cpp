@@ -1,7 +1,7 @@
 #include "replay.h"
 
-void record_frame(ReplaySystem &replay, const PlayerInput &p1, const PlayerInput &p2){
-    replay.frames.push_back({p1, p2});
+void record_frame(ReplaySystem &replay, int action_p1, int action_p2){
+    replay.frames.push_back({action_p1, action_p2});
 }
 
 ReplayFrame get_replay_frame(const ReplaySystem &replay, int index){

@@ -1,9 +1,7 @@
-CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: \
- /home/saketh/dev/engine/src/main.cpp /usr/include/stdc-predef.h \
- /home/saketh/dev/engine/include/raylib.h \
- /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
- /home/saketh/dev/engine/src/core/timestep.h \
- /home/saketh/dev/engine/src/core/environment.h \
+CMakeFiles/DeterministicCombatEngine.dir/src/game/combat_env.cpp.o: \
+ /home/saketh/dev/engine/src/game/combat_env.cpp \
+ /usr/include/stdc-predef.h /home/saketh/dev/engine/src/game/combat_env.h \
+ /home/saketh/dev/engine/src/game/../core/environment.h \
  /usr/include/c++/15/vector /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
@@ -62,8 +60,10 @@ CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o: \
  /usr/include/c++/15/bits/uses_allocator.h \
  /usr/include/c++/15/bits/uses_allocator_args.h /usr/include/c++/15/tuple \
  /usr/include/c++/15/bits/ranges_util.h \
- /home/saketh/dev/engine/src/games/combat/combat_env.h \
- /home/saketh/dev/engine/src/games/combat/simulation.h \
- /home/saketh/dev/engine/src/games/combat/entity.h \
- /home/saketh/dev/engine/src/games/combat/input.h \
- /home/saketh/dev/engine/src/core/replay.h
+ /home/saketh/dev/engine/src/game/simulation.h \
+ /home/saketh/dev/engine/src/game/entity.h \
+ /home/saketh/dev/engine/include/raylib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
+ /home/saketh/dev/engine/src/game/input.h \
+ /home/saketh/dev/engine/src/game/../render/renderer.h \
+ /home/saketh/dev/engine/src/game/../debug/debug_overlay.h

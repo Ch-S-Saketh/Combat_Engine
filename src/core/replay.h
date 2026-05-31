@@ -1,11 +1,10 @@
 #pragma once
 
 #include <vector>
-#include "input.h"
 
 struct ReplayFrame{
-    PlayerInput p1;
-    PlayerInput p2;
+    int action_p1;
+    int action_p2;
 };
 
 struct ReplaySystem{
@@ -16,5 +15,5 @@ struct ReplaySystem{
     int playbackFrame;
 };
 
-void record_frame(ReplaySystem &replay, const PlayerInput &p1, const PlayerInput &p2);
+void record_frame(ReplaySystem &replay, int action_p1, int action_p2);
 ReplayFrame get_replay_frame(const ReplaySystem &replay, int index);
