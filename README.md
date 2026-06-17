@@ -1,4 +1,4 @@
-# Antigravity ML Engine
+# ML Engine
 
 A high-performance, deterministic C++ game engine designed from the ground up for Reinforcement Learning (RL) and Machine Learning (ML) Agents. 
 
