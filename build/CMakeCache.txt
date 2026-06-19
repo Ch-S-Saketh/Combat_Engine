@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=DeterministicCombatEngine
+CMAKE_PROJECT_NAME:STATIC=RLEngine
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -223,6 +223,15 @@ DeterministicCombatEngine_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 DeterministicCombatEngine_SOURCE_DIR:STATIC=/home/saketh/dev/engine
+
+//Value Computed by CMake
+RLEngine_BINARY_DIR:STATIC=/home/saketh/dev/engine/build
+
+//Value Computed by CMake
+RLEngine_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+RLEngine_SOURCE_DIR:STATIC=/home/saketh/dev/engine
 
 
 ########################

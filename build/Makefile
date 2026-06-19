@@ -117,24 +117,72 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named DeterministicCombatEngine
+# Target rules for targets named RLEngine
 
 # Build rule for target.
-DeterministicCombatEngine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 DeterministicCombatEngine
-.PHONY : DeterministicCombatEngine
+RLEngine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RLEngine
+.PHONY : RLEngine
 
 # fast build rule for target.
-DeterministicCombatEngine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/build
-.PHONY : DeterministicCombatEngine/fast
+RLEngine/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/build
+.PHONY : RLEngine/fast
+
+src/core/dqn_agent.o: src/core/dqn_agent.cpp.o
+.PHONY : src/core/dqn_agent.o
+
+# target to build an object file
+src/core/dqn_agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/dqn_agent.cpp.o
+.PHONY : src/core/dqn_agent.cpp.o
+
+src/core/dqn_agent.i: src/core/dqn_agent.cpp.i
+.PHONY : src/core/dqn_agent.i
+
+# target to preprocess a source file
+src/core/dqn_agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/dqn_agent.cpp.i
+.PHONY : src/core/dqn_agent.cpp.i
+
+src/core/dqn_agent.s: src/core/dqn_agent.cpp.s
+.PHONY : src/core/dqn_agent.s
+
+# target to generate assembly for a file
+src/core/dqn_agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/dqn_agent.cpp.s
+.PHONY : src/core/dqn_agent.cpp.s
+
+src/core/neural_net.o: src/core/neural_net.cpp.o
+.PHONY : src/core/neural_net.o
+
+# target to build an object file
+src/core/neural_net.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/neural_net.cpp.o
+.PHONY : src/core/neural_net.cpp.o
+
+src/core/neural_net.i: src/core/neural_net.cpp.i
+.PHONY : src/core/neural_net.i
+
+# target to preprocess a source file
+src/core/neural_net.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/neural_net.cpp.i
+.PHONY : src/core/neural_net.cpp.i
+
+src/core/neural_net.s: src/core/neural_net.cpp.s
+.PHONY : src/core/neural_net.s
+
+# target to generate assembly for a file
+src/core/neural_net.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/neural_net.cpp.s
+.PHONY : src/core/neural_net.cpp.s
 
 src/core/replay.o: src/core/replay.cpp.o
 .PHONY : src/core/replay.o
 
 # target to build an object file
 src/core/replay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/core/replay.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/replay.cpp.o
 .PHONY : src/core/replay.cpp.o
 
 src/core/replay.i: src/core/replay.cpp.i
@@ -142,7 +190,7 @@ src/core/replay.i: src/core/replay.cpp.i
 
 # target to preprocess a source file
 src/core/replay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/core/replay.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/replay.cpp.i
 .PHONY : src/core/replay.cpp.i
 
 src/core/replay.s: src/core/replay.cpp.s
@@ -150,15 +198,39 @@ src/core/replay.s: src/core/replay.cpp.s
 
 # target to generate assembly for a file
 src/core/replay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/core/replay.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/core/replay.cpp.s
 .PHONY : src/core/replay.cpp.s
+
+src/game_entry.o: src/game_entry.cpp.o
+.PHONY : src/game_entry.o
+
+# target to build an object file
+src/game_entry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/game_entry.cpp.o
+.PHONY : src/game_entry.cpp.o
+
+src/game_entry.i: src/game_entry.cpp.i
+.PHONY : src/game_entry.i
+
+# target to preprocess a source file
+src/game_entry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/game_entry.cpp.i
+.PHONY : src/game_entry.cpp.i
+
+src/game_entry.s: src/game_entry.cpp.s
+.PHONY : src/game_entry.s
+
+# target to generate assembly for a file
+src/game_entry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/game_entry.cpp.s
+.PHONY : src/game_entry.cpp.s
 
 src/games/combat/combat.o: src/games/combat/combat.cpp.o
 .PHONY : src/games/combat/combat.o
 
 # target to build an object file
 src/games/combat/combat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat.cpp.o
 .PHONY : src/games/combat/combat.cpp.o
 
 src/games/combat/combat.i: src/games/combat/combat.cpp.i
@@ -166,7 +238,7 @@ src/games/combat/combat.i: src/games/combat/combat.cpp.i
 
 # target to preprocess a source file
 src/games/combat/combat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat.cpp.i
 .PHONY : src/games/combat/combat.cpp.i
 
 src/games/combat/combat.s: src/games/combat/combat.cpp.s
@@ -174,7 +246,7 @@ src/games/combat/combat.s: src/games/combat/combat.cpp.s
 
 # target to generate assembly for a file
 src/games/combat/combat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat.cpp.s
 .PHONY : src/games/combat/combat.cpp.s
 
 src/games/combat/combat_env.o: src/games/combat/combat_env.cpp.o
@@ -182,7 +254,7 @@ src/games/combat/combat_env.o: src/games/combat/combat_env.cpp.o
 
 # target to build an object file
 src/games/combat/combat_env.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat_env.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat_env.cpp.o
 .PHONY : src/games/combat/combat_env.cpp.o
 
 src/games/combat/combat_env.i: src/games/combat/combat_env.cpp.i
@@ -190,7 +262,7 @@ src/games/combat/combat_env.i: src/games/combat/combat_env.cpp.i
 
 # target to preprocess a source file
 src/games/combat/combat_env.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat_env.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat_env.cpp.i
 .PHONY : src/games/combat/combat_env.cpp.i
 
 src/games/combat/combat_env.s: src/games/combat/combat_env.cpp.s
@@ -198,7 +270,7 @@ src/games/combat/combat_env.s: src/games/combat/combat_env.cpp.s
 
 # target to generate assembly for a file
 src/games/combat/combat_env.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/combat_env.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/combat_env.cpp.s
 .PHONY : src/games/combat/combat_env.cpp.s
 
 src/games/combat/debug_overlay.o: src/games/combat/debug_overlay.cpp.o
@@ -206,7 +278,7 @@ src/games/combat/debug_overlay.o: src/games/combat/debug_overlay.cpp.o
 
 # target to build an object file
 src/games/combat/debug_overlay.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/debug_overlay.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/debug_overlay.cpp.o
 .PHONY : src/games/combat/debug_overlay.cpp.o
 
 src/games/combat/debug_overlay.i: src/games/combat/debug_overlay.cpp.i
@@ -214,7 +286,7 @@ src/games/combat/debug_overlay.i: src/games/combat/debug_overlay.cpp.i
 
 # target to preprocess a source file
 src/games/combat/debug_overlay.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/debug_overlay.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/debug_overlay.cpp.i
 .PHONY : src/games/combat/debug_overlay.cpp.i
 
 src/games/combat/debug_overlay.s: src/games/combat/debug_overlay.cpp.s
@@ -222,7 +294,7 @@ src/games/combat/debug_overlay.s: src/games/combat/debug_overlay.cpp.s
 
 # target to generate assembly for a file
 src/games/combat/debug_overlay.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/debug_overlay.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/debug_overlay.cpp.s
 .PHONY : src/games/combat/debug_overlay.cpp.s
 
 src/games/combat/renderer.o: src/games/combat/renderer.cpp.o
@@ -230,7 +302,7 @@ src/games/combat/renderer.o: src/games/combat/renderer.cpp.o
 
 # target to build an object file
 src/games/combat/renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/renderer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/renderer.cpp.o
 .PHONY : src/games/combat/renderer.cpp.o
 
 src/games/combat/renderer.i: src/games/combat/renderer.cpp.i
@@ -238,7 +310,7 @@ src/games/combat/renderer.i: src/games/combat/renderer.cpp.i
 
 # target to preprocess a source file
 src/games/combat/renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/renderer.cpp.i
 .PHONY : src/games/combat/renderer.cpp.i
 
 src/games/combat/renderer.s: src/games/combat/renderer.cpp.s
@@ -246,7 +318,7 @@ src/games/combat/renderer.s: src/games/combat/renderer.cpp.s
 
 # target to generate assembly for a file
 src/games/combat/renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/renderer.cpp.s
 .PHONY : src/games/combat/renderer.cpp.s
 
 src/games/combat/simulation.o: src/games/combat/simulation.cpp.o
@@ -254,7 +326,7 @@ src/games/combat/simulation.o: src/games/combat/simulation.cpp.o
 
 # target to build an object file
 src/games/combat/simulation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/simulation.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/simulation.cpp.o
 .PHONY : src/games/combat/simulation.cpp.o
 
 src/games/combat/simulation.i: src/games/combat/simulation.cpp.i
@@ -262,7 +334,7 @@ src/games/combat/simulation.i: src/games/combat/simulation.cpp.i
 
 # target to preprocess a source file
 src/games/combat/simulation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/simulation.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/simulation.cpp.i
 .PHONY : src/games/combat/simulation.cpp.i
 
 src/games/combat/simulation.s: src/games/combat/simulation.cpp.s
@@ -270,15 +342,39 @@ src/games/combat/simulation.s: src/games/combat/simulation.cpp.s
 
 # target to generate assembly for a file
 src/games/combat/simulation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/games/combat/simulation.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/combat/simulation.cpp.s
 .PHONY : src/games/combat/simulation.cpp.s
+
+src/games/flappy_bird/flappy_bird_env.o: src/games/flappy_bird/flappy_bird_env.cpp.o
+.PHONY : src/games/flappy_bird/flappy_bird_env.o
+
+# target to build an object file
+src/games/flappy_bird/flappy_bird_env.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/flappy_bird/flappy_bird_env.cpp.o
+.PHONY : src/games/flappy_bird/flappy_bird_env.cpp.o
+
+src/games/flappy_bird/flappy_bird_env.i: src/games/flappy_bird/flappy_bird_env.cpp.i
+.PHONY : src/games/flappy_bird/flappy_bird_env.i
+
+# target to preprocess a source file
+src/games/flappy_bird/flappy_bird_env.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/flappy_bird/flappy_bird_env.cpp.i
+.PHONY : src/games/flappy_bird/flappy_bird_env.cpp.i
+
+src/games/flappy_bird/flappy_bird_env.s: src/games/flappy_bird/flappy_bird_env.cpp.s
+.PHONY : src/games/flappy_bird/flappy_bird_env.s
+
+# target to generate assembly for a file
+src/games/flappy_bird/flappy_bird_env.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/games/flappy_bird/flappy_bird_env.cpp.s
+.PHONY : src/games/flappy_bird/flappy_bird_env.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -286,7 +382,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -294,7 +390,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/DeterministicCombatEngine.dir/build.make CMakeFiles/DeterministicCombatEngine.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RLEngine.dir/build.make CMakeFiles/RLEngine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -305,10 +401,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... DeterministicCombatEngine"
+	@echo "... RLEngine"
+	@echo "... src/core/dqn_agent.o"
+	@echo "... src/core/dqn_agent.i"
+	@echo "... src/core/dqn_agent.s"
+	@echo "... src/core/neural_net.o"
+	@echo "... src/core/neural_net.i"
+	@echo "... src/core/neural_net.s"
 	@echo "... src/core/replay.o"
 	@echo "... src/core/replay.i"
 	@echo "... src/core/replay.s"
+	@echo "... src/game_entry.o"
+	@echo "... src/game_entry.i"
+	@echo "... src/game_entry.s"
 	@echo "... src/games/combat/combat.o"
 	@echo "... src/games/combat/combat.i"
 	@echo "... src/games/combat/combat.s"
@@ -324,6 +429,9 @@ help:
 	@echo "... src/games/combat/simulation.o"
 	@echo "... src/games/combat/simulation.i"
 	@echo "... src/games/combat/simulation.s"
+	@echo "... src/games/flappy_bird/flappy_bird_env.o"
+	@echo "... src/games/flappy_bird/flappy_bird_env.i"
+	@echo "... src/games/flappy_bird/flappy_bird_env.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
