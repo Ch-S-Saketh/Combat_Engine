@@ -2,7 +2,7 @@
 
 #include "core/timestep.h"
 #include "core/environment.h"
-#include "games/combat/combat_env.h"
+#include "game_entry.h"
 #include "core/replay.h"
 
 enum class AppState {
@@ -15,7 +15,7 @@ int main(){
     InitWindow(1280,720,"Deterministic Combat Engine");
     SetTargetFPS(144);
 
-    Environment* env = new CombatEnvironment();
+    Environment* env = CreateGameEnvironment();
     ReplaySystem replay;
     replay.playbackMode = false;
     replay.playbackFrame = 0;
