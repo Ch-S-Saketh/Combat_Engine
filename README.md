@@ -72,10 +72,16 @@ public:
 ```
 
 ### 3. Plug it into the Engine
-Open `src/main.cpp` and swap out the environment pointer:
+Open `src/game_entry.cpp` and swap out the environment pointer. **This is the ONLY file you need to touch to integrate your game!** You never need to modify the core engine or `main.cpp`.
+
 ```cpp
-// Instead of the default CombatEnvironment
-Environment* env = new MyCustomEnv(); 
+#include "environment.h"
+#include "games/my_custom_game/my_custom_env.h"
+
+Environment* CreateGameEnvironment() {
+    // Return your custom environment here
+    return new MyCustomEnv(); 
+}
 ```
 
 ---
@@ -96,10 +102,23 @@ Environment* env = new MyCustomEnv();
    make
    ```
 
-### Running the Engine
+### Running the Engine (Human Mode)
 Execute the built binary from the `build/` directory:
 ```bash
 ./RLEngine
+```
+
+### 🤖 Training the Agent (Headless Mode)
+To run the engine without visual rendering and execute a lightning-fast RL Q-Learning training loop simulating thousands of episodes instantly:
+```bash
+./RLEngine --train
+```
+*Note: This will train the agent and save its "brain" to `agent.bin`.*
+
+### 📺 Watching the Agent Play
+After the agent has finished training, you can watch it play the game using its learned policy:
+```bash
+./RLEngine --play
 ```
 
 ---

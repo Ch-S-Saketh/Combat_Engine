@@ -26,7 +26,9 @@ private:
     float bird_y;
     float bird_vy;
     float reward_p1;
+    int score;
     bool crashed;
+    bool was_jumping;
     std::vector<Pipe> pipes;
 
     int frame_counter;
